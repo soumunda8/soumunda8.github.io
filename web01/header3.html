@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=dege"> <!-- 인터넷익스프로러로 접근시 엣지로 연결되게 함 -->
+    <meta http-equiv="Author" content="천재교육 콘텐츠 제작팀">
+    <meta http-equiv="Publisher" content="천재교육 김기태">
+    <meta http-equiv="Copyright" content="Copyright@chunjae.co.kr">
+    <title>천재교육</title>
+
+    <!-- 검색엔진 최적화(SEO:Search Engeen) -->
+    <meta name="Subject" content="천재교육, 천재IT교육센터">
+    <meta name="Keyword" content="천재교육, 천재 IT, 교육 교재, 교과서, 스마트 교육">
+    <meta name="Description" content="천재교육은 교과서 제작, 교육 교재 제작, 초등, 중등, 고등 교재">
+    <meta name="Robots" content="index, follow">
+    <!-- <meta name="Robots" content="noindex, nofollow"> // 검색안하게 하는 설정 -->
+
+    <!-- 오픈 그래프(Open graph) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="천재교육">
+    <meta property="og:description" content="앞선 생각으로 더 큰 미래의 교육을 준비하는 기업">
+    <meta property="og:image" content="https://soumunda8.github.io/web01/images/chunjae_logo.png"> <!-- 검색시 썸네일 이미지 -->
+    <meta property="og:url" content="https://soumunda8.github.io/web01">
+
+    <!-- 트위터 -->
+    <meta name="twitter:card" content="picture">
+    <meta name="twitter:title" content="천재교육">
+    <meta name="twitter:description" content="앞선 생각으로 더 큰 미래의 교육을 준비하는 기업">
+    <meta name="twitter:image" content="https://soumunda8.github.io/web01/images/chunjae_logo.png">
+
+    <!-- 웹/앱과 같이 모바일로 들어오면 모바일주소를 출력 -->
+    <!-- 모바일 앱이 ios 인 경우 -->
+    <meta property="al:ios:url" content="ios 앱 url">
+    <meta property="al:ios:app_store_id" content="ios 앱스토어 ID">
+    <meta property="al:ios:app_name" content="ios 앱 이름">
+    <!-- 모바일 앱이 android 인 경우 -->
+    <meta property="al:android:url" content="안드로이드 앱 URL">
+    <meta property="al:android:app_name" content="안드로이드 앱 이름">
+    <meta property="al:android:package" content="안드로이드 앱 패키지">
+    <meta property="al:web:url" content="안드로이드 앱 URL">
+    
+    <!-- 파비콘 설정 : 32X32 자주 사용 -->
+    <!-- 16X16, 24X24, 32X32, 48X48, 64X64, 96X96, 114X114, 128X128, 256X256 등을 활용 -->
+    <!-- 표준 파비콘 -->
+    <link rel="shortcut icon" href="./images/logo.ico">
+    <!-- 애플 계열 모바일 -->
+    <link rel="apple-touch-ico-precomposed" href="./images/logo64.png">
+    <!-- IE 계열 브라우저 -->
+    <meta name="msapplication-TileColor" content="#fff">
+    <meta name="msapplication-TileImage" content="./images/logo48.png">
+    <!-- 파이어폭스, 오페라 또는 구형 크롬/사파리 -->
+    <link rel="icon" href="./images/logo16.png" sizes="16x16">
+    <link rel="icon" href="./images/logo32.png" sizes="32x32">
+    <link rel="icon" href="./images/logo48.png" sizes="48x48">
+    <link rel="icon" href="./images/logo64.png" sizes="64x64">
+
+    <!-- 스타일 초기화 : reset.css 또는 normalize.css -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" rel="stylesheet"> // reset.css cdn -->
+    <link rel="stylesheet" href="./css/fonts.css">
+
+    <!-- 필요한 폰트를 로딩 : 구글 웹 폰트에서 폰트를 선택하여 해당 내용을 붙여 넣기 -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- 필요한 플러그인 연결 -->
+
+    <!--
+        font-family : 'Noto Sans';
+    -->
+
+
+    <style>
+        * {margin:0;padding:0;}
+        body, html {width:100%;font-family :'Noto Sans', sans-serif;}
+        ul {list-style:none;}
+        a {text-decoration:none;color:#333;}
+        img {border:0}
+        input {outline:0;}
+        .wrap {clear:both;width:100%;}
+        .wrap::after {content:'';display:block;width:100%;clear:both;}
+    </style>
+    <style>
+        /* 헤더 영역 스타일 */
+        .hd {clear:both;position:fixed;width:100%;height:90px;left:0;top:0;right:0;z-index:999;background-color:#fff;}
+        .hd:hover {background-color:#fff;}
+        .hd_wrap {clear:both;width:100%;width:1200px;margin:0 auto;}
+
+        .tnb {float:right;}
+        .tnb .menu {height:50px;line-height:50px;margin-top:20px;}
+        .tnb .menu li {float:left;padding-left:40px;}
+        .tnb .menu li a {font-size:0.85em;font-weight:200;}
+
+        .logo {display:block;width:auto;height:50px;float:left;margin-top:20px;}
+        .logo img {display:block;width:auto;height:50px;}
+
+        .gnb {width:600px;height:90px;position:absolute;top:0;left:50%;margin-left:-300px;}
+        .gnb .menu {clear:both;height:90px;}
+        .gnb .menu::after {content:"";clear:both;display:block;width:100%;}
+        .gnb .menu li {float:left;width:20%;position:relative;}
+        .gnb .menu li .sub {display:none;visibility:hidden;opacity:0;position:absolute;z-index:999;width:120px;top:90px;transition:0.3s;}
+        .gnb .menu li a.dp1 {display:block;line-height:90px;text-align:center;background-color:#fff;color:#333;}
+        .gnb .menu li:hover a.dp1 {border-bottom:2px solid deepskyblue;background-color:deepskyblue;color:#fff}
+        .gnb:hover .menu li .sub {visibility:visible;display:block;height:240px;opacity:1;}
+        .gnb .menu li .sub li {padding-left:0;line-height:34px;clear:both;float:none;width:120px;z-index:990;}
+        .gnb .menu li .sub li a {display:block;text-align:center;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;box-sizing:border-box;width:100%;padding:0 10%;}
+        .gnb .menu li .sub li:hover a {background-color:rgba(200,200,200,0.9);}
+    </style>
+    <style>
+        /* 본문 영역 스타일 */
+        .contents {clear:both;min-height:150vh;margin-top:90px;}
+        .contents::after {content:"";clear:both;display:block;width:100%;}
+        .vs {clear:both;width:100%;min-height:400px;background-color:pink;position:relative;}
+        .vs .tit {position:absolute;width:100%;top:90px;left:0;text-align:center;font-size:150px;color:navy;z-index:10;}
+    </style>
+    <style>
+        /* 푸터 영역 스타일 */
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header class="hd">
+            <div class="hd_wrap">
+                <a href="" class="logo"><img src="./images/logo.png" alt="천재IT교육센터 로고타임"></a>
+                <!-- nav.gnb>ul.menu>li.item$*5>a.dp1{메인$}+(ul.sub>li*4>a{서브$$}) -->
+                <nav class="gnb">
+                    <ul class="menu">
+                        <li class="item1">
+                            <a href="" class="dp1">메인1</a>
+                            <ul class="sub">
+                                <li><a href="">서브01</a></li>
+                                <li><a href="">서브02</a></li>
+                                <li><a href="">서브03</a></li>
+                                <li><a href="">서브04</a></li>
+                            </ul>
+                        </li>
+                        <li class="item2">
+                            <a href="" class="dp1">메인2</a>
+                            <ul class="sub">
+                                <li><a href="">서브01</a></li>
+                                <li><a href="">서브02서브02서브02서브02서브02</a></li>
+                                <li><a href="">서브03</a></li>
+                                <li><a href="">서브04</a></li>
+                            </ul>
+                        </li>
+                        <li class="item3">
+                            <a href="" class="dp1">메인3</a>
+                            <ul class="sub">
+                                <li><a href="">서브01</a></li>
+                                <li><a href="">서브02</a></li>
+                                <li><a href="">서브03</a></li>
+                                <li><a href="">서브04</a></li>
+                            </ul>
+                        </li>
+                        <li class="item4">
+                            <a href="" class="dp1">메인4</a>
+                            <ul class="sub">
+                                <li><a href="">서브01</a></li>
+                                <li><a href="">서브02</a></li>
+                                <li><a href="">서브03</a></li>
+                                <li><a href="">서브04</a></li>
+                            </ul>
+                        </li>
+                        <li class="item5">
+                            <a href="" class="dp1">메인5</a>
+                            <ul class="sub">
+                                <li><a href="">서브01</a></li>
+                                <li><a href="">서브02</a></li>
+                                <li><a href="">서브03</a></li>
+                                <li><a href="">서브04</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <nav class="tnb">
+                    <ul class="menu">
+                        <li><a href="">상단1</a></li>
+                        <li><a href="">상단2</a></li>
+                        <li><a href="">상단3</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="contents">
+            <figure class="vs">
+                <h2 class="tit">배너제목</h2>
+            </figure>
+        </div>
+        <footer class="ft">
+            <div class="ft_wrap"></div>
+        </footer>
+    </div>
+</body>
+</html>
