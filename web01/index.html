@@ -40,7 +40,7 @@
     <meta property="al:android:package" content="안드로이드 앱 패키지">
     <meta property="al:web:url" content="안드로이드 앱 URL">
     
-    <!-- 파비콘 설정 : 32X32 자주 사용 -->
+    <!-- 파비콘 설정 :32X32 자주 사용 -->
     <!-- 16X16, 24X24, 32X32, 48X48, 64X64, 96X96, 114X114, 128X128, 256X256 등을 활용 -->
     <!-- 표준 파비콘 -->
     <link rel="shortcut icon" href="./images/logo.ico">
@@ -55,24 +55,27 @@
     <link rel="icon" href="./images/logo48.png" sizes="48x48">
     <link rel="icon" href="./images/logo64.png" sizes="64x64">
 
-    <!-- 스타일 초기화 : reset.css 또는 normalize.css -->
+    <!-- 스타일 초기화 :reset.css 또는 normalize.css -->
     <link rel="stylesheet" href="./css/reset.css">
     <!-- <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" rel="stylesheet"> // reset.css cdn -->
     <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/google.css">
 
-    <!-- 필요한 폰트를 로딩 : 구글 웹 폰트에서 폰트를 선택하여 해당 내용을 붙여 넣기 -->
+    <!-- 필요한 폰트를 로딩 :구글 웹 폰트에서 폰트를 선택하여 해당 내용을 붙여 넣기 -->
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 
     <!-- 필요한 플러그인 연결 -->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
 
+    
     <!--
-        font-family : 'Noto Sans';
+        font-family :'Noto Sans';
     -->
 
-
     <style>
+        /* 스타일 초기화 */ 
         * {margin:0;padding:0;}
-        body, html {width:100%;font-family :'Noto Sans', sans-serif;}
+        body, html {width:100%;font-family :'Noto Sans KR', sans-serif;overflow-x:hidden;}
         ul {list-style:none;}
         a {text-decoration:none;color:#333;}
         img {border:0}
@@ -95,6 +98,8 @@
         .logo {display:block;width:auto;height:50px;float:left;}
         .logo img {display:block;width:auto;height:50px;}
         .gnb {width:900px;margin:0 auto;float:right;height:50px;}
+        .gnb::before {content:"";width:100vw;height:137px;background-color:rgba(255, 255, 255, 0.75);position:absolute;left:0;top:90px;z-index:20;display:none;}
+        .gnb:hover::before {display:block;}
         .gnb .menu {clear:both;height:50px;}
         .gnb .menu::after {content:"";clear:both;display:block;width:100%;}
         .gnb .menu li {float:left;width:20%;position:relative;}
@@ -110,8 +115,55 @@
         /* 본문 영역 스타일 */
         .contents {clear:both;}
         .contents::after {content:"";clear:both;display:block;width:100%;}
-        .vs {clear:both;width:100%;min-height:400px;background-color:pink;position:relative;}
-        .vs .tit {position:absolute;width:100%;top:90px;left:0;text-align:center;font-size:150px;color:navy;z-index:10;}
+
+        .vs {clear:both;width:100%;min-height:600px;background-color:pink;position:relative;overflow:hidden;}
+        .img_box {position:relative;width:100%;height:600px;overflow:hidden;}
+        .img_box li {visibility:hidden;opacity:0;transition-duration:0.7s;width:100%;height:600px;transition-delay:0.7s;}
+        .img_box li.active {visibility:visible;opacity:1;}
+        .img_box li .bg_box {width:100vw;height:600px;background-repeat:no-repeat;background-position:center center;background-size:cover;position:absolute;left:0;top:0;z-index:5;}
+        .img_box li.active .bg_box {z-index:6;}
+        .img_box li.item1 .bg_box {background-image:url(./images/vs01.jpg);}
+        .img_box li.item2 .bg_box {background-image:url(./images/vs02.jpg);}
+
+        .img_box li .vs_tit {position:absolute;z-index:10;top:180px;left:100px;font-weight:200;font-size:60px;color:#fff;line-height:1.3;}/* 좁다 :1.3 / 넓다 :1.6 */
+        .img_box li .vs_tit strong {font-weight:500;}
+
+        .btn_box li .vs_btn {display:block;width:12px;height:12px;background-color:rgba(255,255,255,0.8);border:2px solid rgba(255,255,255,0.8);box-sizing:border-box;position:absolute;top:100px;left:100px;z-index:10;cursor:pointer;border-radius:50%;}
+        .btn_box li.item2 .vs_btn {left:132px;}
+        .btn_box li.active .vs_btn {background-color:#fff;border:1px solid #333;}
+        .vs_ra {display:none;}
+
+        .play_btn {display:block;width:12px;height:12px;position:absolute;top:95px;left:164px;z-index:14;cursor:pointer;background-color:transparent; border:none;color:#fff;font-weight:900;}
+        .play_btn::after {content:"| |";}
+        .play_btn.active::after {content:"▶";}
+
+        .page {clear:both;width:100vw;height:100vh;position:relative;display:block;}
+        .page::after {content:"";width:100%;display:block;clear:both;}
+
+        .page_wrap {clear:both;width:1200px;margin:0 auto;height:auto;}
+        .page_tit {text-align:center;font-size:48px;padding-top:1.75em;} /* padding-top:0.5em;(평균) */
+
+        .pic_list {clear:both;width:1200px;margin:62px auto;}
+        .pic_list li {width:280px;margin-left:26px;float:left;height:400px;background-repeat:no-repeat;background-position:center center;filter:blur(1px);filter:brightness(90%);transition:0.4s;margin-top:30px;box-shadow:12px 12px 12px #999;overflow:hidden;}
+        .pic_list li:hover {filter:blur(0);filter:brightness(140%);margin-top:10px}
+        .pic_list li a {display:block;width:256px;height:376px;margin:11px;border:1px solid #fff;color:#fff;}
+        .pic_list li:first-child {margin-left:0;}
+        .pic_list li.item1 {background-image:url(./images/tab01_01.jpg);}
+        .pic_list li.item2 {background-image:url(./images/tab01_02.jpg);}
+        .pic_list li.item3 {background-image:url(./images/tab01_03.jpg);}
+        .pic_list li.item4 {background-image:url(./images/tab01_04.jpg);}
+        .pic_com {padding-left:20px;padding-top:20px;font-size:14px;}
+        .pic_tit {padding-left:20px;padding-top:20px;font-size:18px;font-weight:600;}
+        .pic_arrow {display:block;width:110px;height:10px;border-bottom:1px solid #fff;margin-top:20px;margin-left:-20px;transition:0.4s;position:relative;}
+        .pic_arrow::after {content:"";position:absolute;right:0;bottom:-1px;width:10px;height:10px;border-bottom:1px solid #fff;transform-origin:100% 100%;transform:rotate(45deg);display:none;}
+        /*.pic_arrow::after {content:"";position:absolute;right:7px;bottom:-3px;width:1px;height:20px;transform:rotate(135deg);z-index:1;background:#fff;}*/
+        .pic_list li:hover a .pic_arrow {margin-left:20px;}
+        .pic_list li:hover a .pic_arrow::after {display:block;}
+
+        #page1 {background-color:#f1f2f3;background-image:url(./images/tab01_bg.png);background-position:15vw 63vh;background-repeat:no-repeat;}
+        #page2 .page_wrap {}
+
+
     </style>
     <style>
         /* 푸터 영역 스타일 */
@@ -185,8 +237,175 @@
         </header>
         <div class="contents">
             <figure class="vs">
-                <h2 class="tit">배너제목</h2>
+                <ul class="img_box">
+                    <li class="item1 active">
+                        <input type="radio" name="vs_ra" id="vs_ra1" class="vs_ra" checked>
+                        <div class="bg_box"></div>
+                        <h2 class="vs_tit">교육에 대한 끊임없는 도전<br><strong>행복한 내일을 함께 합니다</strong></h2>
+                    </li>
+                    <li class="item2">
+                        <input type="radio" name="vs_ra" id="vs_ra2" class="vs_ra">
+                        <div class="bg_box"></div>
+                        <h2 class="vs_tit">“나눔의 힘! 실천의 힘!”<br><strong>작은 따뜻함으로 세상을 바꿉니다</strong></h2>
+                    </li>
+                </ul>
+                <ul class="btn_box">
+                    <li class="item1 active"><label for="vs_ra1" class="vs_btn"></label></li>
+                    <li class="item2"><label for="vs_ra2" class="vs_btn"></label></li>
+                    <button class="play_btn"></button>
+                </ul>
             </figure>
+            <script>
+                $(function() {
+                    $(".btn_box li .vs_btn").click(function() {
+                        // var par = $(this).parents("li").attr("class");
+                        var par = $(this).parents("li").index();
+                        $(".img_box li").removeClass("active");
+                        $(".btn_box li").removeClass("active");
+                        $(".img_box li").eq(par).addClass("active");   // index() 사용시
+                        $(".btn_box li").eq(par).addClass("active");
+                    });
+
+                    var sw = 1;
+                    var int1 = setInterval(function() {
+
+                        // sw++; // 여러개일때 스위치문처럼사용
+
+                        if(sw == 1) {
+                            autoplay(sw);
+                            sw = 0;
+                        } else {
+                            autoplay(sw);
+                            sw = 1;
+                        }
+                        
+                    }, 3500);   // ms단위
+
+                    function autoplay(n) {
+                        $(".img_box li").removeClass("active");
+                        $(".btn_box li").removeClass("active");
+                        $(".img_box li").eq(n).addClass("active");
+                        $(".btn_box li").eq(n).addClass("active");
+                    }
+
+                    $(".play_btn").click(function(){
+                        if($(this).hasClass("active")) {
+                            $(this).removeClass("active");
+                            sw = 1;
+                            int1 = setInterval(function() {
+                            if(sw == 1) {
+                                autoplay(sw);
+                                sw = 0;
+                            } else {
+                                autoplay(sw);
+                                sw = 1;
+                            }
+
+                            }, 3500);
+                        } else {
+                            $(this).addClass("active");
+                            sw = 0;
+                            clearInterval(int1);
+                        }
+                    });
+
+                })
+            </script>
+            <seciton class="page" id="page1">
+                <div class="page_wrap">
+                    <h2 class="page_tit">사회공헌</h2>
+                    <ul class="pic_list">
+                        <li class="item1">
+                            <a href="">
+                                <p class="pic_com">설명</p>
+                                <h3 class="pic_tit">제목</h3>
+                                <span class="pic_arrow"></span>
+                            </a>
+                        </li>
+                        <li class="item2">
+                            <a href="">
+                                <p class="pic_com">설명</p>
+                                <h3 class="pic_tit">제목</h3>
+                                <span class="pic_arrow"></span>
+                            </a>
+                        </li>
+                        <li class="item3">
+                            <a href="">
+                                <p class="pic_com">설명</p>
+                                <h3 class="pic_tit">제목</h3>
+                                <span class="pic_arrow"></span>
+                            </a>
+                        </li>
+                        <li class="item4">
+                            <a href="">
+                                <p class="pic_com">설명</p>
+                                <h3 class="pic_tit">제목</h3>
+                                <span class="pic_arrow"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </seciton>
+            <seciton class="page" id="page2">
+                <div class="page_wrap">
+                    <h2 class="page_tit">페이지 제목2</h2>
+                    <p class="page_com">페이지 설명</p>
+                    <!-- div.slide_box>ul.card_list>li.item$*7>a>div.thumb_box+p.thumb_tit{썸네일제목$}+(div.ico_box>span.ico.item1{아이콘}+span.thumb_date{2023-07-18}) -->
+                    <div class="slide_box">
+                        <ul class="card_list">
+                            <li class="item1">
+                                <a href="">
+                                    <div class="thumb_box"></div>
+                                    <p class="thumb_tit">썸네일제목1</p>
+                                    <div class="ico_box"><span class="ico item1">아이콘</span><span class="thumb_date">2023-07-18</span></div>
+                                </a>
+                            </li>
+                            <li class="item2">
+                                <a href="">
+                                    <div class="thumb_box"></div>
+                                    <p class="thumb_tit">썸네일제목2</p>
+                                    <div class="ico_box"><span class="ico item1">아이콘</span><span class="thumb_date">2023-07-18</span></div>
+                                </a>
+                            </li>
+                            <li class="item3">
+                                <a href="">
+                                    <div class="thumb_box"></div>
+                                    <p class="thumb_tit">썸네일제목3</p>
+                                    <div class="ico_box"><span class="ico item2">아이콘</span><span class="thumb_date">2023-07-18</span></div>
+                                </a>
+                            </li>
+                            <li class="item4">
+                                <a href="">
+                                    <div class="thumb_box"></div>
+                                    <p class="thumb_tit">썸네일제목4</p>
+                                    <div class="ico_box"><span class="ico item1">아이콘</span><span class="thumb_date">2023-07-18</span></div>
+                                </a>
+                            </li>
+                            <li class="item5">
+                                <a href="">
+                                    <div class="thumb_box"></div>
+                                    <p class="thumb_tit">썸네일제목5</p>
+                                    <div class="ico_box"><span class="ico item1">아이콘</span><span class="thumb_date">2023-07-18</span></div>
+                                </a>
+                            </li>
+                            <li class="item6">
+                                <a href="">
+                                    <div class="thumb_box"></div>
+                                    <p class="thumb_tit">썸네일제목6</p>
+                                    <div class="ico_box"><span class="ico item2">아이콘</span><span class="thumb_date">2023-07-18</span></div>
+                                </a>
+                            </li>
+                            <li class="item7">
+                                <a href="">
+                                    <div class="thumb_box"></div>
+                                    <p class="thumb_tit">썸네일제목7</p>
+                                    <div class="ico_box"><span class="ico item1">아이콘</span><span class="thumb_date">2023-07-18</span></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </seciton>
         </div>
         <footer class="ft">
             <div class="ft_wrap"></div>

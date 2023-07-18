@@ -59,6 +59,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <!-- <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" rel="stylesheet"> // reset.css cdn -->
     <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/google.css">
 
     <!-- 필요한 폰트를 로딩 : 구글 웹 폰트에서 폰트를 선택하여 해당 내용을 붙여 넣기 -->
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
@@ -95,6 +96,8 @@
         .logo {display:block;width:auto;height:50px;float:left;}
         .logo img {display:block;width:auto;height:50px;}
         .gnb {width:900px;margin:0 auto;float:right;height:50px;}
+        .gnb::before {content:"";width:100vw;height:137px;background-color:rgba(255, 255, 255, 0.75);position:absolute;left:0;top:90px;z-index:20;display:none;}
+        .gnb:hover::before {display:block;}
         .gnb .menu {clear:both;height:50px;}
         .gnb .menu::after {content:"";clear:both;display:block;width:100%;}
         .gnb .menu li {float:left;width:20%;position:relative;}
