@@ -56,10 +56,13 @@
     <link rel="icon" href="./images/logo64.png" sizes="64x64">
 
     <!-- 스타일 초기화 :reset.css 또는 normalize.css -->
-    <link rel="stylesheet" href="./css/reset.css">
     <!-- <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" rel="stylesheet"> // reset.css cdn -->
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/google.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/hd.css">
+    <link rel="stylesheet" href="./css/ft.css">
 
     <!-- 필요한 폰트를 로딩 :구글 웹 폰트에서 폰트를 선택하여 해당 내용을 붙여 넣기 -->
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
@@ -67,54 +70,9 @@
     <!-- 필요한 플러그인 연결 -->
     <script src="https://code.jquery.com/jquery-latest.js"></script>
 
-    
-    <!--
-        font-family :'Noto Sans';
-    -->
-
-    <style>
-        /* 스타일 초기화 */ 
-        * {margin:0;padding:0;}
-        body, html {width:100%;font-family :'Noto Sans KR', sans-serif;overflow-x:hidden;-ms-overflow-style:none;scrollbar-width:none;}
-        body::-webkit-scrollbar, html::-webkit-scrollbar {display:none;}
-        ul {list-style:none;}
-        a {text-decoration:none;color:#333;}
-        img {border:0}
-        input {outline:0;}
-        .wrap {clear:both;width:100%;}
-        .wrap::after {content:'';display:block;width:100%;clear:both;}
-    </style>
-    <style>
-        /* 헤더 영역 스타일 */
-        .hd {clear:both;position:relative;width:100%;height:90px;}
-        .hd_wrap {clear:both;width:100%;}
-        .hd_wrap:first-child {background-color:deepskyblue;border-bottom:1px solid #333;}
-        .hd_wrap:last-child {background-color:#fff;width:1200px;margin:0 auto;}
-
-        .tnb {width:1200px;margin:0 auto;}
-        .tnb::after {content:"";clear:both;display:block;width:100%;}
-        .tnb .menu {float:right;height:40px;margin:auto;line-height:40px;}
-
-        .menu li {float:left;}
-        .logo {display:block;width:auto;height:50px;float:left;}
-        .logo img {display:block;width:auto;height:50px;}
-        .gnb {width:900px;margin:0 auto;float:right;height:50px;}
-        .gnb::before {content:"";width:100vw;height:137px;background-color:rgba(255, 255, 255, 0.75);position:absolute;left:0;top:90px;z-index:20;display:none;}
-        .gnb:hover::before {display:block;}
-        .gnb .menu {clear:both;height:50px;}
-        .gnb .menu::after {content:"";clear:both;display:block;width:100%;}
-        .gnb .menu li {float:left;width:20%;position:relative;}
-        .gnb .menu li .sub {display:none;visibility:hidden;opacity:0;position:absolute;z-index:999;width:100%;top:50px;transition:0.3s;}
-        .gnb .menu li a.dp1 {display:block;line-height:50px;border-bottom:2px solid #fff;text-align:center;background-color:#fff;color:#333;}
-        .gnb .menu li:hover a.dp1 {border-bottom:2px solid deepskyblue;background-color:deepskyblue;color:#fff}
-        .gnb:hover .menu li .sub {visibility:visible;display:block;height:240px;opacity:1;}
-        .gnb .menu li .sub li {padding-left:0;line-height:34px;clear:both;float:none;width:100%;z-index:990;}
-        .gnb .menu li .sub li a {display:block;text-align:center;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;box-sizing:border-box;width:100%;padding:0 10%;}
-        .gnb .menu li .sub li:hover a {background-color:rgba(200,200,200,0.9);}
-    </style>
     <style>
         /* 본문 영역 스타일 */
-        .contents {clear:both;}
+        .contents {clear:both;min-height:100vh;}
         .contents::after {content:"";clear:both;display:block;width:100%;}
 
         .vs {clear:both;width:100%;min-height:600px;background-color:pink;position:relative;overflow:hidden;}
@@ -200,36 +158,6 @@
         .sl-btn-box .btn.next {top:100px;}
         .sl-btn-box .btn.prev {top:178px;}
     </style>
-    <style>
-        /* 푸터 영역 스타일 */
-        .ft {clear:both;width:100%;box-shadow:0 -10px 30px #999;}
-        .ft::after {content:"";display:block;width:100%;clear:both;}
-        .ft_wrap1 {clear:both;width:100%;border-bottom:1px solid #eee;padding-bottom:30px;padding-top:30px;}
-        .ft_link {clear:both;width:1200px;margin:0 auto;}
-        .ft_link::after {clear:both;content:"";display:block;width:100%;}
-        .ft_link li {float:left;line-height:48px;}
-        .fnb {float:left;}
-        .fnb::after {clear:both;content:"";display:block;width:100%;}
-        .fnb li:nth-child(2):after {content:"|";padding-left:30px;padding-right:30px;}
-        .snb {float:right;}
-        .snb::after {clear:both;content:"";display:block;width:100%;}
-        .snb li {margin-left:14px;background-repeat:no-repeat;background-image:url(./images/ico_foot_sns.png);border-radius:50%;margin-top:10px;}
-        .snb li.item1 {background-position:0px 0px;}
-        .snb li.item2 {background-position:-34px 0px;}
-        .snb li.item3 {background-position:-68px 0px;}
-        .snb li.item4 {background-position:-102px 0px;}
-        .snb li.item5 {background-position:-136px 0px;}
-        .snb li a {display:block;width:34px;height:34px;overflow:hidden;text-indent:-9999px;}
-        .snb li.locate {background-image:none;width:200px;margin-top:0;line-height:48px;height:48px;}
-        .snb li.locate option {display:block;height:48px;line-height:48px;min-height:48px;}
-        #sel {height:100%;width:100%;}
-        
-        .ft_wrap2 {clear:both;width:1200px;margin:0 auto;padding-bottom:30px;padding-top:30px;}
-        .copyright, .cp {line-height:20px;font-size:12px;}
-        .copyright span::after {content:"|";padding-left:20px;padding-right:20px;}
-        .copyright span.end::after {content:"";padding-right:0;}
-        .cp {color:#ccc;}
-    </style>
 </head>
 <body>
     <div class="wrap">
@@ -237,60 +165,60 @@
             <div class="hd_wrap">
                 <nav class="tnb">
                     <ul class="menu">
-                        <li><a href="">상단1</a></li>
-                        <li><a href="">상단2</a></li>
-                        <li><a href="">상단3</a></li>
+                        <li><a href="./login.html">로그인</a></li>
+                        <li><a href="./join.html">회원가입</a></li>
+                        <li><a href="./map.html">오시는길</a></li>
                     </ul>
                 </nav>
             </div>
             <div class="hd_wrap">
-                <a href="" class="logo"><img src="./images/logo.png" alt="천재IT교육센터 로고타임"></a>
+                <a href="./index.html" class="logo"><img src="./images/logo.png" alt="천재IT교육센터 로고타임"></a>
                 <!-- nav.gnb>ul.menu>li.item$*5>a.dp1{메인$}+(ul.sub>li*4>a{서브$$}) -->
                 <nav class="gnb">
                     <ul class="menu">
                         <li class="item1">
-                            <a href="" class="dp1">메인1</a>
+                            <a href="company.html#com" class="dp1">회사소개</a>
                             <ul class="sub">
-                                <li><a href="">서브01</a></li>
-                                <li><a href="">서브02</a></li>
-                                <li><a href="">서브03</a></li>
-                                <li><a href="">서브04</a></li>
+                                <li><a href="company.html#com">인사말</a></li>
+                                <li><a href="company.html#vision">비전및목표</a></li>
+                                <li><a href="company.html#history">연혁</a></li>
+                                <li><a href="./map.html">오시는길</a></li>
                             </ul>
                         </li>
                         <li class="item2">
-                            <a href="" class="dp1">메인2</a>
+                            <a href="studyJava.html#structure" class="dp1">JAVA</a>
                             <ul class="sub">
-                                <li><a href="">서브01</a></li>
-                                <li><a href="">서브02서브02서브02서브02서브02</a></li>
-                                <li><a href="">서브03</a></li>
-                                <li><a href="">서브04</a></li>
+                                <li><a href="studyJava.html#structure">생성자란?</a></li>
+                                <li><a href="studyJava.html#class">클래스란?</a></li>
+                                <li><a href="studyJava.html#trycatch">예외처리란?</a></li>
+                                <li><a href="studyJava.html#method">메소드란?</a></li>
                             </ul>
                         </li>
                         <li class="item3">
-                            <a href="" class="dp1">메인3</a>
+                            <a href="studyHtml.html#tags" class="dp1">HTML&CSS</a>
                             <ul class="sub">
-                                <li><a href="">서브01</a></li>
-                                <li><a href="">서브02</a></li>
-                                <li><a href="">서브03</a></li>
-                                <li><a href="">서브04</a></li>
+                                <li><a href="studyHtml.html#tags">태그란?</a></li>
+                                <li><a href="studyHtml.html#style">스타일이란?</a></li>
+                                <li><a href="studyHtml.html#web01">웹접근성이란?</a></li>
+                                <li><a href="studyHtml.html#web02">웹표준이란?</a></li>
                             </ul>
                         </li>
                         <li class="item4">
-                            <a href="" class="dp1">메인4</a>
+                            <a href="studyJs.html#events" class="dp1">JS</a>
                             <ul class="sub">
-                                <li><a href="">서브01</a></li>
-                                <li><a href="">서브02</a></li>
-                                <li><a href="">서브03</a></li>
-                                <li><a href="">서브04</a></li>
+                                <li><a href="studyJs.html#events">이벤트란?</a></li>
+                                <li><a href="studyJs.html#click">클릭관련 </a></li>
+                                <li><a href="studyJs.html#aboutclass">클래스설정관련</a></li>
+                                <li><a href="studyJs.html#use">사용방법</a></li>
                             </ul>
                         </li>
                         <li class="item5">
-                            <a href="" class="dp1">메인5</a>
+                            <a href="connect.html#notice" class="dp1">커뮤니티</a>
                             <ul class="sub">
-                                <li><a href="">서브01</a></li>
-                                <li><a href="">서브02</a></li>
-                                <li><a href="">서브03</a></li>
-                                <li><a href="">서브04</a></li>
+                                <li><a href="connect.html#notice">공지사항</a></li>
+                                <li><a href="connect.html#photo">사진자료</a></li>
+                                <li><a href="connect.html#event">이벤트</a></li>
+                                <li><a href="connect.html#qna">자유게시판</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -564,5 +492,6 @@
         </footer>
     </div>
     <!-- 문서 위로 이동 -->
+    <a href="#" class="totop">↑</a>
 </body>
 </html>

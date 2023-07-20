@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+/* 푸터 영역 스타일 */
+.ft {clear:both;width:100%;box-shadow:0 -10px 30px #999;}
+.ft::after {content:"";display:block;width:100%;clear:both;}
+.ft_wrap1 {clear:both;width:100%;border-bottom:1px solid #eee;padding-bottom:30px;padding-top:30px;}
+.ft_link {clear:both;width:1200px;margin:0 auto;}
+.ft_link::after {clear:both;content:"";display:block;width:100%;}
+.ft_link li {float:left;line-height:48px;}
+.fnb {float:left;}
+.fnb::after {clear:both;content:"";display:block;width:100%;}
+.fnb li:nth-child(2):after {content:"|";padding-left:30px;padding-right:30px;}
+.snb {float:right;}
+.snb::after {clear:both;content:"";display:block;width:100%;}
+.snb li {margin-left:14px;background-repeat:no-repeat;background-image:url(./images/ico_foot_sns.png);border-radius:50%;margin-top:10px;}
+.snb li.item1 {background-position:0px 0px;}
+.snb li.item2 {background-position:-34px 0px;}
+.snb li.item3 {background-position:-68px 0px;}
+.snb li.item4 {background-position:-102px 0px;}
+.snb li.item5 {background-position:-136px 0px;}
+.snb li a {display:block;width:34px;height:34px;overflow:hidden;text-indent:-9999px;}
+.snb li.locate {background-image:none;width:200px;margin-top:0;line-height:48px;height:48px;}
+.snb li.locate option {display:block;height:48px;line-height:48px;min-height:48px;}
+#sel {height:100%;width:100%;}
+
+.ft_wrap2 {clear:both;width:1200px;margin:0 auto;padding-bottom:30px;padding-top:30px;}
+.copyright, .cp {line-height:20px;font-size:12px;}
+.copyright span::after {content:"|";padding-left:20px;padding-right:20px;}
+.copyright span.end::after {content:"";padding-right:0;}
+.cp {color:#ccc;}
+
+.totop {display:block;width:42px;height:42px;text-align:center;line-height:42px;background-color:rgba(0,0,0,0.8);color:#fff;font-size:30px;position:fixed;right:60px;bottom:30px;border-radius:50%;}

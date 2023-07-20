@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+/* font-family :'Noto Sans'; */ 
+
+/* 스타일 초기화 */ 
+* {margin:0;padding:0;}
+body, html {width:100%;font-family :'Noto Sans KR', sans-serif;overflow-x:hidden;-ms-overflow-style:none;scrollbar-width:none;}
+body::-webkit-scrollbar, html::-webkit-scrollbar {display:none;}
+ul {list-style:none;}
+a {text-decoration:none;color:#333;}
+img {border:0}
+input {outline:0;}
+.wrap {clear:both;width:100%;}
+.wrap::after {content:'';display:block;width:100%;clear:both;}
