@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+.header {height:70px;}
+.header .logo {font-family:'DelaGothicOne', cursive;cursor:pointer;font-size:3em;line-height:70px;letter-spacing:-0.125em;display:inline-block;}
+.header .menu {display:inline-block;position:absolute;right:0;}
+.header .menu li {display:inline-block;padding:0 0.5em;}
+.header .menu li a {padding:0 0.5em;line-height:70px;font-weight:900;font-size:1.5em;}
+
+.header .logo:hover, .header .logo:active, .header .menu li a:hover, .header .menu li a:active {color:#ac63d2}
+
+.container > div {height:100vh;}
+
+/*모바일*/
+@media all and (max-width:768px) {
+}
+
+/* 태블릿 */
+@media all and (min-width:769px) and (max-width:1024px) {
+}
+
+@media all and (max-width:1024px) {
+}
+
+@media all and (min-width:1025px) {
+}
+
+@media all and (min-width:1025px) and (max-width:1199px) {
+}
+
+/* PC */
+@media all and (min-width:1200px) {
+}

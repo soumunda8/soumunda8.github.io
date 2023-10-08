@@ -1,0 +1,123 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 100;
+    src: url('./webfonts/NotoSansKR-Thin.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 200;
+    src: url('./webfonts/NotoSansKR-ExtraLight.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 300;
+    src: url('./webfonts/NotoSansKR-Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./webfonts/NotoSansKR-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    src: url('./webfonts/NotoSansKR-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 600;
+    src: url('./webfonts/NotoSansKR-SemiBold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./webfonts/NotoSansKR-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 800;
+    src: url('./webfonts/NotoSansKR-ExtraBold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 900;
+    src: url('./webfonts/NotoSansKR-Black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'DelaGothicOne';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./webfonts/DelaGothicOne-Regular.ttf') format('truetype');
+}
+
+/* Reset Style */
+* {margin:0;padding:0;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;font-family:'Noto Sans KR', sans-serif;color:#333;}
+body, html {overflow-x:hidden;-ms-overflow-style:none;scrollbar-width:none;min-height:100vh;}
+body::-webkit-scrollbar, html::-webkit-scrollbar {display:none;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block;}
+body {line-height:1;}
+img {border:0}
+input {outline:0;}
+ol, ul {list-style:none;}
+a {text-decoration:none;}
+blockquote, q {quotes:none;}
+blockquote:before, blockquote:after, q:before, q:after {content:'';}
+table {border-collapse:collapse;border-spacing:0;}
+
+:root {
+    --main-color:#009142;
+    --sub-color:#0380c5;
+    --admin-main-color:#530009;
+    --admin-sub-color:#276cda;
+}
+
+.inner {position:relative;}
+.clearfix::after {display:block;content:'';clear:both;}
+.blind {position:absolute;width:0;height:0;font-size:0;line-height:0;text-indent:-9999px;overflow:hidden;}
+
+
+/*모바일*/
+@media all and (max-width:768px) {
+    .inner {width:calc(100% - 20px);}
+}
+
+/* 태블릿 */
+@media all and (min-width:769px) and (max-width:1024px) {
+    .inner {width:calc(100% - 20px);}
+}
+
+@media all and (max-width:1024px) {
+
+    .inner {margin:0 10px;}
+    .forPc {display:none;}
+
+}
+
+@media all and (min-width:1025px) {
+
+    .inner {margin:0 auto;}
+    .forMobile {display:none;}
+
+}
+
+@media all and (min-width:1025px) and (max-width:1199px) {
+    .inner {width:1000px;}
+}
+
+/* PC */
+@media all and (min-width:1200px) {
+    .inner {width:1200px;}
+}
