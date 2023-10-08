@@ -1,24 +1,45 @@
 @charset "UTF-8";
 
-.header {height:70px;}
-.header .logo {font-family:'DelaGothicOne', cursive;cursor:pointer;font-size:3em;line-height:70px;letter-spacing:-0.125em;display:inline-block;}
+.header {height:70px;position:fixed;top:0;left:0;right:0;border-bottom:1px solid #ddd;box-sizing:border-box;background-color:#fff;z-index:10;}
+.header .logo {font-family:'DelaGothicOne', cursive;font-size:3em;line-height:70px;letter-spacing:-0.125em;display:inline-block;cursor:pointer;}
 .header .menu {display:inline-block;position:absolute;right:0;}
 .header .menu li {display:inline-block;padding:0 0.5em;}
-.header .menu li a {padding:0 0.5em;line-height:70px;font-weight:900;font-size:1.5em;}
+.header .menu li p {padding:0 0.5em;line-height:70px;font-weight:900;font-size:1.5em;cursor:pointer;}
+.header .logo:hover, .header .logo:active, .header .menu li p:hover, .header .menu li p:active {color:#ac63d2}
+.menu.forMobile > i {line-height:70px;}
+.menu.forMobile .menu_area > i {position:fixed;right:50%;top:0;background-color:#fff;width:40px;line-height:40px;text-align:center;}
+.menu.forMobile .menu_area {display:none;position:relative;}
+.menu.forMobile .menu_area::before {content:"";position:fixed;display:block;background-color:rgba(0,0,0,0.5);left:0;right:0;top:0;bottom:0;}
+.menu.forMobile .menu_area.active {display:block;}
+.menu.forMobile .menu_area ul {position:fixed;right:0;top:0;bottom:0;width:50%;box-sizing:border-box;background-color:#fff;}
+.menu.forMobile .menu_area li {display:block;}
 
-.header .logo:hover, .header .logo:active, .header .menu li a:hover, .header .menu li a:active {color:#ac63d2}
+.footer {background-color:#333;padding:2em 0;text-align:center;}
+.footer .footer_top li {display:inline-block;margin:0 0.5em;}
+.footer .footer_top i {color:#fff;font-size:2em;}
+.footer .copyright {color:#fff;padding-top:1em;}
 
-.container > div {height:100vh;}
+.container {margin-top:70px;}
+
+#about {background-color:pink;}
+#skill {background-color:burlywood;}
+#project {background-color:lightblue;}
+#career {background-color:lightgreen;}
 
 /*모바일*/
 @media all and (max-width:768px) {
+    .header .logo {font-size:1.5em;}
+    .header .menu li p {font-size:1em;}
 }
 
 /* 태블릿 */
 @media all and (min-width:769px) and (max-width:1024px) {
+    .header .logo {font-size:2em;}
+    .header .menu li p {font-size:1.5em;}
 }
 
 @media all and (max-width:1024px) {
+    .menu.forMobile > i, .menu.forMobile .menu_area > i {font-size:1.5em;}
 }
 
 @media all and (min-width:1025px) {

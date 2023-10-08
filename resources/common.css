@@ -102,14 +102,14 @@ table {border-collapse:collapse;border-spacing:0;}
 @media all and (max-width:1024px) {
 
     .inner {margin:0 10px;}
-    .forPc {display:none;}
+    .forPc {display: none !important;;}
 
 }
 
 @media all and (min-width:1025px) {
 
     .inner {margin:0 auto;}
-    .forMobile {display:none;}
+    .forMobile {display:none !important;;}
 
 }
 

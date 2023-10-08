@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#000000">
+    <meta name="theme-color" content="#ffffff">
     <meta name="author" content="박나연">
     <meta name="subject" content="포토폴리오">
     <meta name="keyword" content="박나연, 개발자, 포토폴리오">
     <meta name="description" content="박나연 개발자 포토폴리오">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="noindex,nofollow">
     <meta http-equiv="X-UA-Compatible" content="IE=dege">
 
     <meta property="og:type" content="website">
@@ -29,6 +29,7 @@
     <link rel="icon" href="./images/common/logo_128.png" sizes="128x128">
 
     <script src="./resources/jquery-3.7.1.min.js"></script>
+    <script src="./resources/main.js"></script>
     <link rel="stylesheet" href="./resources/common.css">
     <link rel="stylesheet" href="./resources/main.css">
     <link rel="stylesheet" href="./resources/all.css">
@@ -45,30 +46,59 @@
     <header class="header">
         <div class="inner">
             <h1 class="logo">NA, YEON</h1>
-            <nav class="menu">
+            <nav class="menu forPc">
                 <ul>
-                    <li><a href="#About">ABOUT ME</a></li>
-                    <li><a href="#Skill">SKILLS</a></li>
-                    <li><a href="#Project">PROJECTS</a></li>
-                    <li><a href="#Career">CAREER</a></li>
+                    <li><p data-area="about">ABOUT ME</p></li>
+                    <li><p data-area="skill">SKILLS</p></li>
+                    <li><p data-area="project">PROJECTS</p></li>
+                    <li><p data-area="career">CAREERS</p></li>
                 </ul>
+            </nav>
+            <nav class="menu forMobile">
+                <i class="fas fa-bars" onclick="showMenu()"><span class="blind">메뉴</span></i>
+                <div class="menu_area">
+                    <i class="fas fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><p data-area="about">ABOUT ME</p></li>
+                        <li><p data-area="skill">SKILLS</p></li>
+                        <li><p data-area="project">PROJECTS</p></li>
+                        <li><p data-area="career">CAREERS</p></li>
+                    </ul>
+                </div>
             </nav>
         </div>
     </header>
     <div class="container">
-        <div id="About">
-            <h2 style="text-align:center;">About</h2>
+        <div id="about">
+            <div class="inner">
+                <h2>about</h2>
+            </div>
         </div>
-        <div id="Skill">
-            <h2 style="text-align:center;">Skill</h2>
+        <div id="skill">
+            <div class="inner">
+                <h2>Skill</h2>
+            </div>
         </div>
-        <div id="Project">
-            <h2 style="text-align:center;">Project</h2>
+        <div id="project">
+            <div class="inner">
+                <h2>Project</h2>
+            </div>
         </div>
-        <div id="Career">
-            <h2 style="text-align:center;">Career</h2>
+        <div id="career">
+            <div class="inner">
+                <h2>Career</h2>
+            </div>
         </div>
     </div>
-    <footer></footer>
+    <footer class="footer">
+        <div class="footer_top">
+            <ul>
+                <li><a href="https://github.com/soumunda8" target='_blank'><i class="fab fa-github-square"></i><p class="blind">깃허브</p></a></li>
+                <li><a href="https://novah-step.tistory.com" target='_blank'><i class="fab fa-blogger"></i><p class="blind">티스토리</p></a></li>
+                <li><a href="https://www.instagram.com/sysout_error/?hl=ko" target='_blank'><i class="fab fa-instagram-square"></i><p class="blind">인스타그램</p></a></li>
+            </ul>
+        </div>
+        <p class="copyright">©2023 Na Yeon Park. All rights reserved.</p>
+    </footer>
 </body>
 </html>
