@@ -4,7 +4,6 @@ $(function(){
     $("#about").css("height", screenHeight);
     $("#skill").css("height", screenHeight);
     $("#project").css("min-height", screenHeight);
-    $("#career").css("min-height", screenHeight);
 
     $("h1").click(function(){ 
         $("html, body").stop().animate({scrollTop:0}, 1000);

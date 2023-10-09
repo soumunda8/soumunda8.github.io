@@ -20,26 +20,64 @@
 .footer .copyright {color:#fff;padding-top:1em;}
 
 .container {margin-top:70px;}
+.content_area {padding:1.5rem 0;}
+.content_area h2 {text-align:center;font-size:4em;font-weight:900;position:relative;letter-spacing:-0.075em;}
+.content_area h2::before {position:absolute;content:"";display:block;width:20%;height:2px;background-color:#333;bottom:0;left:50%;margin-left:-10%;}
+.content_area h2 > i {font-size:0.8em;margin-right:0.5em;}
 
-#about {background-color:pink;}
-#skill {background-color:burlywood;}
-#project {background-color:lightblue;}
-#career {background-color:lightgreen;}
+.reversal {background-color:#333;}
+.reversal .content_area h2, .reversal .content_area h2 > i {color:#fff;}
+.reversal .content_area h2::before {background-color:#fff;}
+
+.project_area {box-sizing:border-box;border:1px solid #333;border-radius:20px;padding:20px;margin-top:2rem;}
+.project_title {text-align:center;margin-bottom:1.5em;}
+.project_title h3 {font-size:2.5em;font-weight:900;letter-spacing:-0.075em;}
+.project_title p {font-size:1.2em;letter-spacing:-0.075em;color:lightslategrey;}
+.project_area .project_thumb, .project_area .project_info {display:inline-block;width:49%;vertical-align:top;}
+.project_area .project_thumb {text-align:center;}
+.project_area .project_thumb > img {width:85%;height:auto;}
+.project_area .info_detail {padding-bottom:1em;border-bottom:1px solid #333;}
+.project_area .info_detail .btn_area {margin:1em auto 0;text-align:center;}
+.project_area .info_detail .btn_area a {border-radius:5px;display:inline-block;width:80px;height:80px;text-align:center;padding:15px 0 0;font-weight:700;box-sizing: border-box;background-color:#ac63d2;margin:0 0.5em;color:#fff}
+.project_area .info_detail .btn_area a:hover, .project_area .info_detail .btn_area a:active {box-shadow:3px 3px 10px rgba(3, 3, 3, 0.3);background-color:#8a49ac;}
+.project_area .info_skill {padding-top:1em;}
+.project_area .info_skill dt, .project_area .info_skill dd {display:inline-block;vertical-align:top;}
+.project_area .info_skill dt {width:25%;font-weight:600;}
+.project_area .info_skill dd {width:70%;}
+.project_area .info_skill dd > a {color:#258ddb;}
+.project_area .info_skill dd > a:hover, .project_area .info_skill dd > a:active {text-decoration:underline;}
+
+@media all and (max-width:610px) {
+    .project_area .info_skill dl {padding-top:1em;}
+    .project_area .info_skill dt, .project_area .info_skill dd {display:block;width:100%;}
+    .project_area .info_skill dd {padding-left:1.5em;}
+}
 
 /*모바일*/
 @media all and (max-width:768px) {
     .header .logo {font-size:1.5em;}
     .header .menu li p {font-size:1em;}
+
+    .content_area h2 {font-size:2em;}
+
+    .project_area {padding:20px 50px;}
 }
 
 /* 태블릿 */
 @media all and (min-width:769px) and (max-width:1024px) {
     .header .logo {font-size:2em;}
     .header .menu li p {font-size:1.5em;}
+
+    .content_area h2 {font-size:3em;}
 }
 
 @media all and (max-width:1024px) {
     .menu.forMobile > i, .menu.forMobile .menu_area > i {font-size:1.5em;}
+    .content_area h2::before {width:50%;margin-left:-25%;}
+
+    .project_area {padding:50px;}
+    .project_area .project_thumb, .project_area .project_info {display:block;width:100%;}
+    .project_area .project_thumb {display:none;}
 }
 
 @media all and (min-width:1025px) {

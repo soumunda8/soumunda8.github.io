@@ -1,0 +1,249 @@
+<html lang="en">
+    <head>
+        <title>플러스앤플러스에듀</title>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=dege"> <!-- 인터넷익스프로러로 접근시 엣지로 연결되게 함 -->
+        <meta http-equiv="Author" content="플러스앤플러스에듀 개인 프로젝트">
+        <meta http-equiv="Publisher" content="플러스앤플러스에듀 박나연">
+        <meta http-equiv="Copyright" content="Copyright@soumunda8.github.io/portfolio">
+
+        <!-- 검색엔진 최적화(SEO) -->
+        <meta name="Subject" content="플러스앤플러스에듀">
+        <meta name="Keywords" content="플러스앤플러스에듀, 온라인 교육, 자격증">
+        <meta name="Description" content="플러스앤플러스에듀는 온라인 교육, 자격증 정보를 제공하는 웹페이지입니다.">
+        <meta name="robots" content="noindex,nofollow">
+
+        <!-- 오픈 그래프(Open graph) -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="플러스앤플러스에듀">
+        <meta property="og:description" content="플러스앤플러스에듀은 온라인 교육, 자격증 정보를 제공하는 웹페이지">
+        <meta property="og:image" content="https://soumunda8.github.io/portfolio/images/project1_og.png">
+        <meta property="og:url" content="https://soumunda8.github.io/portfolio">
+
+        <!-- 파비콘 설정 -->
+        <!-- 16x16, 24x24, 32x32, 48x48, 64x64, 96x96, 114x114, 128x128, 256x256 등을 활용-->
+        <!-- 표준 파비콘 -->
+        <link rel="shortcut icon" href="/project01/image/common/logo.ico">
+        <!-- 애플 계열 모바일 -->
+        <link rel="apple-touch-icon-precomposed" href="/project01/image/common/logo64.png">
+        <!-- IE 계열 브라우저 -->
+        <meta name="msapplication-TileColor" content="#FFFFFF">
+        <meta name="msapplication-TileImage" content="/project01/image/common/logo48.png">
+        <!-- 파이어폭스, 오페라, 또는 구형 크롬/사파리 -->
+        <link rel="icon" href="/project01/image/common/logo16.png" sizes="16x16">
+        <link rel="icon" href="/project01/image/common/logo32.png" sizes="32x32">
+        <link rel="icon" href="/project01/image/common/logo48.png" sizes="48x48">
+        <link rel="icon" href="/project01/image/common/logo64.png" sizes="64x64">
+
+        <link rel="stylesheet" href="/project01/css/google.css">
+        <link rel="stylesheet" href="/project01/css/common.css">
+        <link rel="stylesheet" href="../../resources/all.css">
+
+        <script src="/project01/js/jquery-latest.js"></script>
+
+        <link rel="stylesheet" href="/project01/css/jquery.dataTables.css">
+        <script src="/project01/js/jquery.dataTables.js"></script>
+
+        <!-- 불펌 방지 -->
+        <script>
+            document.oncontextmenu = function() { return false; }
+            document.ondragstart = function() { return false; }
+            document.onselectstart = function() { return false; }
+        </script>
+
+        <link rel="stylesheet" href="/project01/css/main.css">
+    </head>
+    <body>
+        <div class="wrap">
+            <header class="header" id="header">
+                <div class="hd_wrap hd_top">
+                    <nav class="tnb inner">
+                        <ul class="menu clearfix">
+                            <li class="home none"><a href="/project01/admin/index.html"><i class="fas fa-home"></i>Plus&amp;Plus Edu</a></li>
+                            <li><a href="/project01/index.html"><i class="fas fa-sign-out-alt"></i>로그아웃</a></li>
+                            <li class="none"><a href="/project01/admin/memberList.jsp">관리자페이지</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="hd_wrap hd_con">
+                    <div class="inner">
+                        <a href="/project01/admin/index.html" class="logo"><img src="/project01/image/common/logo.png" alt="플러스앤플러스에듀 로고"><p><span class="mainCol">Plus</span> &amp; <span class="subCol">Plus</span> Edu</p></a>
+                        <nav class="gnb">
+                            <ul class="menu">
+                                <li class="item1">
+                                    <a href="/project01/company01.jsp" class="dp1">소개</a>
+                                    <ul class="sub">
+                                        <li><a href="/project01/company01.jsp">인사말</a></li>
+                                        <li><a href="/project01/company02.jsp">연혁</a></li>
+                                        <li><a href="/project01/company03.jsp">오시는길</a></li>
+                                    </ul>
+                                </li>
+                                <li class="item2">
+                                    <a href="/project01/online01.jsp" class="dp1">온라인교육</a>
+                                    <ul class="sub">
+                                        <li><a href="/project01/online01.jsp">서울시평생학습 포털</a></li>
+                                        <li><a href="/project01/online02.jsp">KOCW</a></li>
+                                        <li><a href="/project01/online03.jsp">K-MOOC</a></li>
+                                    </ul>
+                                </li>
+                                <li class="item3">
+                                    <a href="/project01/license01.jsp" class="dp1">자격증</a>
+                                    <ul class="sub">
+                                        <li><a href="/project01/license01.jsp">정보처리기사</a></li>
+                                        <li><a href="/project01/license02.jsp">정보처리산업기사</a></li>
+                                        <li><a href="/project01/board/listBoard.jsp">자유게시판</a></li>
+                                    </ul>
+                                </li>
+                                <li class="item4">
+                                    <a href="/project01/board/listNotice.jsp" class="dp1">커뮤니티</a>
+                                    <ul class="sub">
+                                        <li><a href="/project01/board/listNotice.jsp">공지사항</a></li>
+                                        
+                                        <li><a href="/project01/faq.jsp">자주하는질문</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <div class="contents">
+                <div class="inner">
+                    <figure class="vs">
+                        <ul class="img_box">
+                            <li class="item1">
+                                <input type="radio" name="vs_ra" id="vs_ra1" class="vs_ra" checked="">
+                                <div class="bg_box"></div>
+                                <h2 class="vs_tit">교육에 대한 끊임없는 도전<br><strong>행복한 내일을 함께 합니다</strong></h2>
+                            </li>
+                            <li class="item2 active">
+                                <input type="radio" name="vs_ra" id="vs_ra2" class="vs_ra">
+                                <div class="bg_box"></div>
+                                <h2 class="vs_tit">“나눔의 힘! 실천의 힘!”<br><strong>작은 따뜻함으로 세상을 바꿉니다</strong>
+                                </h2>
+                            </li>
+                        </ul>
+                        <ul class="btn_box">
+                            <li class="item1"><label for="vs_ra1" class="vs_btn"></label></li>
+                            <li class="item2 active"><label for="vs_ra2" class="vs_btn"></label></li>
+                        </ul>
+                        <button type="button" class="play_btn"></button>
+                    </figure>
+                    <script>
+                        $(function(){
+                            $(".btn_box li .vs_btn").click(function(){
+                                var par = $(this).parents("li").index();
+                                $(".img_box li").removeClass("active");
+                                $(".img_box li").eq(par).addClass("active");
+                                $(".btn_box li").removeClass("active");
+                                $(".btn_box li").eq(par).addClass("active");
+                            });
+                            var sw = 1;
+                            var int1 = setInterval(function(){
+                                if(sw==1){
+                                    autoplay(1);
+                                    sw = 0;
+                                } else {
+                                    autoplay(0);
+                                    sw = 1;
+                                }
+                            }, 3500);
+
+                            function autoplay(n){
+                                $(".img_box li").removeClass("active");
+                                $(".img_box li").eq(n).addClass("active");
+                                $(".btn_box li").removeClass("active");
+                                $(".btn_box li").eq(n).addClass("active");
+                            }
+
+                            $(".play_btn").click(function(){
+                                if($(this).hasClass("active")){
+                                    $(this).removeClass("active");
+                                    sw = 1;
+                                    int1 = setInterval(function(){
+                                        if(sw==1){
+                                            autoplay(1);
+                                            sw = 0;
+                                        } else {
+                                            autoplay(0);
+                                            sw = 1;
+                                        }
+                                    }, 3500);
+                                } else {
+                                    $(this).addClass("active");
+                                    sw = 0;
+                                    clearInterval(int1);
+                                }
+                            });
+                        });
+                    </script>
+                </div>
+                <div class="board_wrap">
+                    <div class="inner">
+                        <h2 class="page_tit">커뮤니티</h2>
+                        <ul class="board_lst">
+                            <li class="item1">
+                                <div class="board_tit">
+                                    <h3>공지사항</h3>
+                                    <a href="/project01/board/listNotice.jsp" class="btn_more"><i class="fas fa-plus"></i></a>
+                                </div>
+                                <ul class="board_con">
+                                    
+                                    <li><a href="/project01/board/getNotice.jsp?bno=4">홈페이지 오픈합니다.<span class="date">2023-08-22</span></a></li>
+                                    
+                                </ul>
+                            </li>
+                            <li class="item2">
+                                <div class="board_tit">
+                                    <h3>자유게시판</h3>
+                                    <a href="/project01/board/listBoard.jsp" class="btn_more"><i class="fas fa-plus"></i></a>
+                                </div>
+                                <ul class="board_con">
+                                    
+                                    <li class="no_date">
+                                        등록된 자유게시판이 없습니다.
+                                    </li>
+                                    
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer" id="footer">
+                <div class="ft_wrap">
+                    <div class="ft_top">
+                        <nav class="ft_link inner">
+                            <ul class="fnb">
+                                <li><a href="/project01/privacy.jsp">개인정보취급방침</a></li>
+                                <li><a href="/project01/deniedEmail.jsp">이메일무단수집거부</a></li>
+                                <li><a href="/project01/company03.jsp">오시는길</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="ft_con">
+                        <div class="inner">
+                            <div class="ft_list">
+                                <ul class="ft_list">
+                                    <li>Plus&amp;PlusEdu</li>
+                                    <li>소재지 : 서울시 금천구 가산로9길 54</li>
+                                </ul>
+                                <ul class="ft_list">
+                                    <li>대표전화 : XXX-XXX-XXXX</li>
+                                    <li>FAX : XXX-XXX-XXXX</li>
+                                    <li>e-mail : admin@plusnplus.com</li>
+                                </ul>
+                                <p class="cp">COPYRIGHT ©2023 Plus&amp;PlusEdu. ALL RIGHTS RESERVED.</p>
+                            </div>
+                            <div class="ft_logo">
+                                <img src="/project01/image/common/ft_logo.png" alt="플러스앤플러스에듀 푸터 로고"><p>Plus &amp; Plus Edu</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
