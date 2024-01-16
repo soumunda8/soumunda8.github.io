@@ -29,6 +29,13 @@
 .reversal .content_area h2, .reversal .content_area h2 > i {color:#fff;}
 .reversal .content_area h2::before {background-color:#fff;}
 
+.skill_area {margin:15% 0;}
+.skill_area ul {text-align:center;}
+.skill_area ul li {display:inline-block;width:calc(11.11% - 10px);margin-left:5px;background-color:#fff;vertical-align:middle;max-width:123px;max-height:123px;border-radius:10px;margin-bottom:5%;overflow:hidden;}
+.skill_area ul li:first-child {width:11.11%;}
+.skill_area ul li img {width:100%;}
+.skill_area ul li .skill_mobile {display:none;}
+
 .project_area {box-sizing:border-box;border:1px solid #333;border-radius:20px;padding:20px;margin-top:2rem;}
 .project_title {text-align:center;margin-bottom:1.5em;}
 .project_title h3 {font-size:2.5em;font-weight:900;letter-spacing:-0.075em;}
@@ -46,6 +53,8 @@
 .project_area .info_skill dd {width:70%;}
 .project_area .info_skill dd > a {color:#258ddb;}
 .project_area .info_skill dd > a:hover, .project_area .info_skill dd > a:active {text-decoration:underline;}
+
+.project_area .info_detail .btn_area {display:none;} /* 삭제 예정 */
 
 @media all and (max-width:610px) {
     .project_area .info_skill dl {padding-top:1em;}
@@ -69,6 +78,11 @@
     .header .menu li p {font-size:1.5em;}
 
     .content_area h2 {font-size:3em;}
+
+    .skill_area {margin:5% 0 0;}
+    .skill_area ul li {width:calc(25% - 10px);margin-bottom:2%;}
+    .skill_area ul li:first-child {width:25%;}
+    .skill_area ul li .skill_mobile {display:block;}
 }
 
 @media all and (max-width:1024px) {
