@@ -29,9 +29,9 @@
 .reversal .content_area h2, .reversal .content_area h2 > i {color:#fff;}
 .reversal .content_area h2::before {background-color:#fff;}
 
-.skill_area {margin:15% 0;}
+.skill_area {margin:4% 0;}
 .skill_area ul {text-align:center;}
-.skill_area ul li {display:inline-block;width:calc(11.11% - 10px);margin-left:5px;background-color:#fff;vertical-align:middle;max-width:123px;max-height:123px;border-radius:10px;margin-bottom:5%;overflow:hidden;}
+.skill_area ul li {display:inline-block;width:calc(11.11% - 10px);margin-left:5px;background-color:#fff;vertical-align:middle;max-width:123px;max-height:123px;border-radius:10px;margin-bottom:3%;overflow:hidden;}
 .skill_area ul li:first-child {width:11.11%;}
 .skill_area ul li img {width:100%;}
 .skill_area ul li .skill_mobile {display:none;}
@@ -53,8 +53,15 @@
 .project_area .info_skill dd {width:70%;}
 .project_area .info_skill dd > a {color:#258ddb;}
 .project_area .info_skill dd > a:hover, .project_area .info_skill dd > a:active {text-decoration:underline;}
+#project .content_wrap {overflow-x:scroll;width:10000vw;}
+#project .content_wrap li {width:70.4vw;display:inline-block;vertical-align:top;}
 
 .project_area .info_detail .btn_area {display:none;} /* 삭제 예정 */
+
+@media all and (max-width:1199px) {
+    .skill_area {margin:5% 0 0;}
+    .skill_area ul li {margin-bottom:2%;}
+}
 
 @media all and (max-width:610px) {
     .project_area .info_skill dl {padding-top:1em;}
@@ -70,6 +77,10 @@
     .content_area h2 {font-size:2em;}
 
     .project_area {padding:20px 50px;}
+
+    .skill_area {margin:10% 0 0;}
+    .skill_area ul li {width:calc(18% - 10px);margin-bottom:10%;}
+    .skill_area ul li:first-child {width:18%;}
 }
 
 /* 태블릿 */
@@ -79,10 +90,10 @@
 
     .content_area h2 {font-size:3em;}
 
-    .skill_area {margin:5% 0 0;}
-    .skill_area ul li {width:calc(25% - 10px);margin-bottom:2%;}
     .skill_area ul li:first-child {width:25%;}
+    .skill_area ul li {width:calc(25% - 10px);}
     .skill_area ul li .skill_mobile {display:block;}
+    .skill_area ul li:first-child {width:25%;}
 }
 
 @media all and (max-width:1024px) {
